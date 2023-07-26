@@ -9,6 +9,7 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "grunt": "1.0.4",
+    "jsonwebtoken": "^9.0.1",
     "mysql": "^2.18.1",
     "nodemailer": "^6.9.4",
     "nodemailer-express-handlebars": "^6.1.0",
