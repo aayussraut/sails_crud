@@ -18,4 +18,5 @@ module.exports.policies = {
 
   // '*': true,
   "user/login": "can-login",
+  "user/forgot-password": "can-login",
 };
