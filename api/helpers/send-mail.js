@@ -47,7 +47,6 @@ module.exports = {
         from: "Optimum Futurist<smth@optimum.com>",
         ...inputs.options,
       };
-      console.log(emailOptions);
       await transporter.sendMail(emailOptions);
     } catch (error) {
       sails.log(error);
