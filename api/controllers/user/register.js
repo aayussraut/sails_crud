@@ -35,7 +35,7 @@ module.exports = {
     },
   },
 
-  fn: async function (inputs, exit) {
+  fn: async function (inputs, exits) {
     try {
       const newEmailAddress = inputs.email.toLowerCase();
       const token = await sails.helpers.strings.random("url-friendly");
@@ -58,10 +58,20 @@ module.exports = {
         },
       };
       await sails.helpers.sendMail(email);
-    } catch (err) {
-      console.log(err);
+      return exits.success({
+        message: `An account has been created for ${newUser.email} successfully. Check your email to confirm your account`,
+      });
+    } catch (error) {
+      if (error.code === "E_UNIQUE") {
+        return exits.emailAlreadyInUse({
+          message: "Email address already in use",
+          error: "This email address already exits",
+        });
+      }
+      return exits.error({
+        message: "Oops :) an error occurred",
+        error: error.message,
+      });
     }
-
-    return;
   },
 };
