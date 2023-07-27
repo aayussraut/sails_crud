@@ -32,7 +32,6 @@ module.exports = {
   fn: async function (inputs, exits) {
     const token = this.req.session.authToken;
     const createdBy = await sails.helpers.getUserFromToken(token);
-    console.log(createdBy);
     try {
       const todo = await Todo.create({
         todoTitle: inputs.title,

@@ -29,6 +29,9 @@ module.exports.routes = {
   "POST /user/reset-password": "user/reset-password",
 
   "POST /todos/create": "todos/create",
+  "GET /todos/get": "todos/get",
+  "DELETE /todos/:id/delete": "todos/delete",
+  "PUT /todos/:id/update": "todos/update",
 
   /***************************************************************************
    *                                                                          *

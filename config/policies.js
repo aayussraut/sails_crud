@@ -23,4 +23,7 @@ module.exports.policies = {
 
   "user/logout": "is-logged-in",
   "todos/create": "is-logged-in",
+  "todos/get": "is-logged-in",
+  "todos/delete": "is-logged-in",
+  "todos/update": "is-logged-in",
 };
