@@ -22,5 +22,5 @@ module.exports.policies = {
   "user/forgot-password": "can-login",
 
   "user/logout": "is-logged-in",
-  "todo/create": "is-logged-in",
+  "todos/create": "is-logged-in",
 };

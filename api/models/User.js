@@ -52,6 +52,10 @@ module.exports = {
       columnName: "password_reset_token_expires_at",
       example: 123456789,
     },
+    todos: {
+      collection: "todo",
+      via: "todoCreatedBy",
+    },
   },
   beforeCreate: async function (values, next) {
     // this function will be called before creating a record
