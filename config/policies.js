@@ -17,6 +17,10 @@ module.exports.policies = {
    ***************************************************************************/
 
   // '*': true,
-  "user/login": "can-login",
+
+  "user/login": ["can-login", "already-logged-in"],
   "user/forgot-password": "can-login",
+
+  "user/logout": "is-logged-in",
+  "todo/create": "is-logged-in",
 };
